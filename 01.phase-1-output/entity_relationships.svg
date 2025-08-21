@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1400" height="900" xmlns="http://www.w3.org/2000/svg">
+<defs>
+    <style>
+        .entity { fill: #e8f5e8; stroke: #2e7d2e; stroke-width: 2; }
+        .core-entity { fill: #fff3cd; stroke: #856404; stroke-width: 3; }
+        .entity-text { font-family: Arial, sans-serif; font-size: 14px; font-weight: bold; }
+        .attribute-text { font-family: Arial, sans-serif; font-size: 10px; }
+        .relationship { stroke: #333; stroke-width: 2; marker-end: url(#arrowhead); }
+        .relationship-text { font-family: Arial, sans-serif; font-size: 10px; fill: #666; }
+        .title { font-family: Arial, sans-serif; font-size: 18px; font-weight: bold; fill: #333; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" 
+            refX="10" refY="3.5" orient="auto">
+        <polygon points="0 0, 10 3.5, 0 7" fill="#333" />
+    </marker>
+</defs>
+
+<!-- Title -->
+<text class="title" x="700" y="30" text-anchor="middle">CardDemo Application - Entity Relationship Diagram</text>
+<rect class="core-entity" x="100" y="100" width="250" height="150" rx="8"/>
+<text class="entity-text" x="225" y="125" text-anchor="middle">CUSTOMER</text>
+<text class="attribute-text" x="108" y="150">CUST-ID</text>
+<text class="attribute-text" x="108" y="165">CUST-FIRST-NAME</text>
+<text class="attribute-text" x="108" y="180">CUST-MIDDLE-NAME</text>
+<text class="attribute-text" x="108" y="195">CUST-ADDR-LINE-1</text>
+<text class="attribute-text" x="108" y="210">CUST-ADDR-LINE-2</text>
+<text class="attribute-text" x="108" y="225">CUST-ADDR-LINE-3</text>
+<text class="attribute-text" x="108" y="240">... +10 more</text>
+<rect class="core-entity" x="450" y="100" width="250" height="150" rx="8"/>
+<text class="entity-text" x="575" y="125" text-anchor="middle">ACCOUNT</text>
+<text class="attribute-text" x="458" y="150">ACCT-ID</text>
+<text class="attribute-text" x="458" y="165">ACCT-CURR-BAL</text>
+<text class="attribute-text" x="458" y="180">ACCT-CREDIT-LIMIT</text>
+<text class="attribute-text" x="458" y="195">ACCT-CASH-CREDIT-LIMIT</text>
+<text class="attribute-text" x="458" y="210">ACCT-OPEN-DATE</text>
+<text class="attribute-text" x="458" y="225">ACCT-EXPIRAION-DATE</text>
+<text class="attribute-text" x="458" y="240">... +5 more</text>
+<rect class="core-entity" x="800" y="100" width="250" height="150" rx="8"/>
+<text class="entity-text" x="925" y="125" text-anchor="middle">CARD</text>
+<text class="attribute-text" x="808" y="150">CARD-NUM</text>
+<text class="attribute-text" x="808" y="165">CARD-ACCT-ID</text>
+<text class="attribute-text" x="808" y="180">CARD-CVV-CD</text>
+<text class="attribute-text" x="808" y="195">CARD-EMBOSSED-NAME</text>
+<text class="attribute-text" x="808" y="210">CARD-EXPIRAION-DATE</text>
+<rect class="core-entity" x="450" y="350" width="250" height="150" rx="8"/>
+<text class="entity-text" x="575" y="375" text-anchor="middle">TRAN</text>
+<text class="attribute-text" x="458" y="400">TRAN-ID</text>
+<text class="attribute-text" x="458" y="415">TRAN-TYPE-CD</text>
+<text class="attribute-text" x="458" y="430">TRAN-CAT-CD</text>
+<text class="attribute-text" x="458" y="445">TRAN-SOURCE</text>
+<text class="attribute-text" x="458" y="460">TRAN-DESC</text>
+<text class="attribute-text" x="458" y="475">TRAN-AMT</text>
+<text class="attribute-text" x="458" y="490">... +7 more</text>
+<rect class="entity" x="800" y="350" width="250" height="150" rx="8"/>
+<text class="entity-text" x="925" y="375" text-anchor="middle">CARD-XREF</text>
+<text class="attribute-text" x="808" y="400">XREF-CARD-NUM</text>
+<text class="attribute-text" x="808" y="415">XREF-CUST-ID</text>
+<text class="attribute-text" x="808" y="430">XREF-ACCT-ID</text>
+<rect class="entity" x="100" y="350" width="250" height="150" rx="8"/>
+<text class="entity-text" x="225" y="375" text-anchor="middle">TRAN-CAT</text>
+<text class="attribute-text" x="108" y="400">TRAN-TYPE-CD</text>
+<text class="attribute-text" x="108" y="415">TRAN-CAT-CD</text>
+<text class="attribute-text" x="108" y="430">TRAN-CAT-TYPE-DESC</text>
+<rect class="entity" x="100" y="600" width="250" height="150" rx="8"/>
+<text class="entity-text" x="225" y="625" text-anchor="middle">TRAN-TYPE</text>
+<text class="attribute-text" x="108" y="650">TRAN-TYPE</text>
+<text class="attribute-text" x="108" y="665">TRAN-TYPE-DESC</text>
+<rect class="entity" x="800" y="600" width="250" height="150" rx="8"/>
+<text class="entity-text" x="925" y="625" text-anchor="middle">SEC-USER-DATA</text>
+<text class="attribute-text" x="808" y="650">SEC-USR-ID</text>
+<text class="attribute-text" x="808" y="665">SEC-USR-FNAME</text>
+<text class="attribute-text" x="808" y="680">SEC-USR-LNAME</text>
+<text class="attribute-text" x="808" y="695">SEC-USR-PWD</text>
+<text class="attribute-text" x="808" y="710">SEC-USR-TYPE</text>
+<text class="attribute-text" x="808" y="725">SEC-USR-FILLER</text>
+<rect class="entity" x="1150" y="100" width="200" height="120" rx="5"/>
+<text class="entity-text" x="1250" y="120" text-anchor="middle">TRAN-CAT-BAL</text>
+<text class="attribute-text" x="1155" y="140">TRANCAT-ACCT-ID</text>
+<text class="attribute-text" x="1155" y="155">TRANCAT-TYPE-CD</text>
+<text class="attribute-text" x="1155" y="170">TRANCAT-CD</text>
+<text class="attribute-text" x="1155" y="185">TRAN-CAT-BAL</text>
+<rect class="entity" x="1150" y="280" width="200" height="120" rx="5"/>
+<text class="entity-text" x="1250" y="300" text-anchor="middle">DATE-REC</text>
+<text class="attribute-text" x="1155" y="320">CODATECN-TYPE</text>
+<text class="attribute-text" x="1155" y="335">CODATECN-INP-DATE</text>
+<text class="attribute-text" x="1155" y="350">CODATECN-1YYYY</text>
+<text class="attribute-text" x="1155" y="365">CODATECN-1MM</text>
+<rect class="entity" x="1150" y="460" width="200" height="120" rx="5"/>
+<text class="entity-text" x="1250" y="480" text-anchor="middle">DIS-GROUP</text>
+<text class="attribute-text" x="1155" y="500">DIS-ACCT-GROUP-ID</text>
+<text class="attribute-text" x="1155" y="515">DIS-TRAN-TYPE-CD</text>
+<text class="attribute-text" x="1155" y="530">DIS-TRAN-CAT-CD</text>
+<text class="attribute-text" x="1155" y="545">DIS-INT-RATE</text>
+<rect class="entity" x="1150" y="640" width="200" height="120" rx="5"/>
+<text class="entity-text" x="1250" y="660" text-anchor="middle">DALYTRAN</text>
+<text class="attribute-text" x="1155" y="680">DALYTRAN-ID</text>
+<text class="attribute-text" x="1155" y="695">DALYTRAN-TYPE-CD</text>
+<text class="attribute-text" x="1155" y="710">DALYTRAN-CAT-CD</text>
+<text class="attribute-text" x="1155" y="725">DALYTRAN-SOURCE</text>
+<rect class="entity" x="1150" y="820" width="200" height="120" rx="5"/>
+<text class="entity-text" x="1250" y="840" text-anchor="middle">ERROR-LOG</text>
+<text class="attribute-text" x="1155" y="860">ERR-DATE</text>
+<text class="attribute-text" x="1155" y="875">ERR-TIME</text>
+<text class="attribute-text" x="1155" y="890">ERR-APPLICATION</text>
+<text class="attribute-text" x="1155" y="905">ERR-LOCATION</text>
+<line class="relationship" x1="225" y1="175" x2="575" y2="175"/>
+<text class="relationship-text" x="400" y="165" text-anchor="middle">1:N</text>
+<line class="relationship" x1="575" y1="175" x2="925" y2="175"/>
+<text class="relationship-text" x="750" y="165" text-anchor="middle">1:N</text>
+<line class="relationship" x1="925" y1="175" x2="575" y2="425"/>
+<text class="relationship-text" x="750" y="290" text-anchor="middle">1:N</text>
+<line class="relationship" x1="925" y1="175" x2="925" y2="425"/>
+<text class="relationship-text" x="925" y="290" text-anchor="middle">1:1</text>
+<line class="relationship" x1="575" y1="425" x2="225" y2="425"/>
+<text class="relationship-text" x="400" y="415" text-anchor="middle">N:1</text>
+</svg>
